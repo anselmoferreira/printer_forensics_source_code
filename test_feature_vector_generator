@@ -1,7 +1,7 @@
 function test_feature_vector_generator()
 
 %Lê a tabela de frames 
-dataset=importdata('../../FrmDescriptors_F5f6.csv');
+dataset=importdata('FrmDescriptors_F5f6.csv');
 
 %nessa tabela, usam-se identificadores (números inteiros) para impressoras fonte, língua do documento, se tem figura ou não e o identificador do documento.
 %Esses vetores aqui vou usar para encontrar o documento em breve, usando os identificadores da tabela.
