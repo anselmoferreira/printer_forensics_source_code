@@ -4,8 +4,7 @@ printer_forensics_source_code
 1. About the source code
 =========================
 
-This is the source code of the paper 'Laser Printer Attribution: Exploring New Features and Beyond', published by
-Forensics Science International.
+This is the source code of the paper 'Laser Printer Attribution: Exploring New Features and Beyond', published by us in Forensics Science International.
 
 This source code investigates banding signatures by exploring multidirectional and multiscale textures of printing 
 material in digitalized versions of printed documents. These signatures are used to identify the laser printer 
