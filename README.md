@@ -11,7 +11,7 @@ material in digitalized versions of printed documents. These signatures are used
 source of a given document. We use SVM linear kernel classifiers to learn these signatures on a set of 
 different printer models and brands. We show accuracies above 98%. 
 
-If you want to know more about these technique you can find our paper at: http://dx.doi.org/10.1016/j.forsciint.2014.11.030
+If you want to know more about the proposed techniques you can find our paper at: http://dx.doi.org/10.1016/j.forsciint.2014.11.030
 
 What do we proposed to laser printer attribution in this paper?
 
