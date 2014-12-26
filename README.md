@@ -16,9 +16,13 @@ If you want to know more about the proposed techniques you can find our paper at
 What do we proposed to laser printer attribution in this paper?
 
 1- A multidirectional GLCM extension technique
+
 2- A multidirectional/multiscale GLCM extension is proposed
+
 3- A novel convolutional gradient texture filter
+
 4- Realistic dataset, comprising 1,000+ Wikipedia documents is proposed for evaluation
+
 5- Comparison to other techniques and other generalpurpose descriptors is performed
 
 If you use this code in your research, please don't forget to cite us in your paper:
@@ -36,12 +40,9 @@ We will also translate the code and comments to english. Sorry, first time makin
 ==================
 
 Here we used our own implementation of the one-against-one linear kernel SVM classifiers using the 
-matlab stats package. You can use Libsvm if you want, but this SVM is more accurate because there are some parameters
-that are easier to set than in Libsvm (kktviolation in the training phase for example). 
+matlab stats package. You can use Libsvm if you want, but this SVM is more accurate because there are some parameters that are easier to set than in Libsvm (kktviolation in the training phase for example). 
 
-Here, we don't use grid search on parameter C (we fixed it to 1). You can find even better results if you do a grid
-search in this parameter. Remember that the matlab implementation of the svm is based on Libsvm, so there is not a 
-problem using our matlab. The version of the Matlab used is Matlab 2012.  
+Here, we don't use grid search on parameter C (we fixed it to 1). You can find even better results if you do a grid search in this parameter. Remember that the matlab implementation of the svm is based on Libsvm, so there is not a problem using our matlab. The version of the Matlab used is Matlab 2012.  
 
 3. How the source code works
 ============================
@@ -51,7 +52,7 @@ the other on Characters and other on Documents. We are planning to put all the f
 The first folder uploaded is the one applied on Frames (on which we found better results).
 
 To run the code, just run main.m. There will be a menu showed to you where you will choose one of the five methods 
-proposed in this paper. We are not making available the inter-approach feature fusion approaches (CTGF_MD_MS and CTGF_3X3_GLCM_MD_MS) 
+proposed in this paper. We are not making available the inter-approach feature fusion approaches (CTGF_MDMS and CTGF_GLCM_MDMS) 
 because they are straighforward: just run each method separately and after that concatenate the feature vectors.
 
 After choosing the method used, the source code will do the following operations:
