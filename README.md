@@ -40,9 +40,9 @@ We will also translate the code and comments to English. Sorry, first time makin
 ==================
 
 Here we used our own implementation of the one-against-one linear kernel SVM classifiers using the 
-matlab stats package. You can use Libsvm if you want, but this SVM is more accurate because there are some parameters that are easier to set than in Libsvm (kktviolation in the training phase for example). 
+matlab stats package. You can use Libsvm if you want, but this SVM is more accurate because there are some parameters that are easier to set than in Libsvm (kktviolation in the training phase for example).  Remember that the matlab implementation of the svm is based on Libsvm, so there is not a problem using this SVM.  
 
-Here, we don't use grid search on parameter C (we fixed it to 1). You can find even better results if you do a grid search in this parameter. Remember that the matlab implementation of the svm is based on Libsvm, so there is not a problem using this SVM.  
+Here, we don't use grid search on parameter C (we fixed it to 1). You can find even better results if you do a grid search in this parameter. Most of the classifications are based on voting of classifications because the documents can have one or more feature vectors.
 
 3. How the source code works
 ============================
@@ -51,18 +51,16 @@ The source code is divided on folders. There are three folders. One of them is a
 the other on Characters and other on Documents. We are planning to put all the folders and source code until 2015.
 The first folder uploaded is the one applied on Frames (on which we found better results). The version of the Matlab used in this code is Matlab 2012. 
 
-To run the code, just run main.m. There will be a menu showed to you where you will choose one of the five methods 
-proposed in this paper. We are not making available the inter-approach feature fusion approaches (CTGF_MDMS and CTGF_GLCM_MDMS) 
-because they are straighforward: just run each method separately and after that concatenate the feature vectors.
+To run the code, just run main.m. There will be a menu showed to you where you will choose one of the five methods
+proposed in the paper. We are not making available the inter-approach feature fusion approaches (CTGF_MDMS and CTGF_GLCM_MDMS) because they are straighforward: just run each method separately and after that concatenate the feature vectors.
 
 After choosing the method used, the source code will do the following operations:
 
 1- Extract the feature vectors of ALL documents. Documents will have one feature vector 
-(when applied on documents) or more (when applied on letters and frames). Please change the folder 
-where the dataset is located on test_feature_vector_generator.m
+(if the technique is applied on documents) or more (if the technique is applied on letters and frames). Please change the folder where the dataset is located on test_feature_vector_generator.
 
 2- Concatenate the feature vectors to train the classifier based on a 5x2 cross validation 
-table (see info/5x2_Data.CSV).
+table (see info/5x2_data.csv).
 
 3- Classify the data by using 5x2 cross validation. The classification is based on 
 the voting of classifications of feature vectors (one or more, depending on where the technique is applied).
@@ -71,7 +69,20 @@ the voting of classifications of feature vectors (one or more, depending on wher
 
 All these steps are done automatically by the source code. So, please be patient and wait it to finish :-)
 
-4. Contact
+4. About Us
+===========
+Anselmo Ferreira: Phd Student in Computer Science at State University of Campinas
+
+Luiz C. Navarro: Master Student in Computer Science at State University of Campinas
+
+Giuliano Pinheiro: Undergraduate Student in Computer Science at State University of Campinas
+
+Jefersson A. Dos Santos: Computer Science Professor at Universidade Federal de Minas Gerais
+
+Anderson Rocha: Computer Science Professor at State University of Campinas
+
+
+5. Contact
 ==========
 
 If you find some problems or have suggestions, please don't hesitate to contact me
