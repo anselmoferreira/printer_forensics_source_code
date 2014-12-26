@@ -71,15 +71,15 @@ All these steps are done automatically by the source code. So, please be patient
 
 4. About the Authors
 ====================
-Anselmo Ferreira: Phd Student in Computer Science at State University of Campinas
+Anselmo Ferreira: Phd Student in Computer Science at State University of Campinas, Brazil
 
-Luiz C. Navarro: Master Student in Computer Science at State University of Campinas
+Luiz C. Navarro: Master Student in Computer Science at State University of Campinas, Brazil
 
-Giuliano Pinheiro: Undergraduate Student in Computer Science at State University of Campinas
+Giuliano Pinheiro: Undergraduate Student in Computer Science at State University of Campinas, Brazil
 
-Jefersson A. Dos Santos: Computer Science Professor at Universidade Federal de Minas Gerais
+Jefersson A. Dos Santos: Computer Science Professor at Universidade Federal de Minas Gerais, Brazil
 
-Anderson Rocha: Computer Science Professor at State University of Campinas
+Anderson Rocha: Computer Science Professor at State University of Campinas, Brazil
 
 
 5. Contact
