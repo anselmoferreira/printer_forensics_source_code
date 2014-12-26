@@ -17,7 +17,7 @@ What do we proposed to laser printer attribution in this paper?
 
 1- A multidirectional GLCM extension technique
 
-2- A multidirectional/multiscale GLCM extension is proposed
+2- A multidirectional/multiscale GLCM extension technique
 
 3- A novel convolutional gradient texture filter
 
@@ -32,9 +32,9 @@ exploring new features and beyond. Forensic Science International, 2015.
 
 The dataset can be found at: http://www.recod.ic.unicamp.br/~anselmo/printer_forensics_dataset/
 
-We are planning to upload ALL the source code used in GitHub. 
+We are planning to upload ALL the source code used in this research in GitHub. 
 
-We will also translate the code and comments to english. Sorry, first time making source code available :-(
+We will also translate the code and comments to English. Sorry, first time making source code available :-(
 
 2. Classifier used
 ==================
@@ -42,14 +42,14 @@ We will also translate the code and comments to english. Sorry, first time makin
 Here we used our own implementation of the one-against-one linear kernel SVM classifiers using the 
 matlab stats package. You can use Libsvm if you want, but this SVM is more accurate because there are some parameters that are easier to set than in Libsvm (kktviolation in the training phase for example). 
 
-Here, we don't use grid search on parameter C (we fixed it to 1). You can find even better results if you do a grid search in this parameter. Remember that the matlab implementation of the svm is based on Libsvm, so there is not a problem using our matlab. The version of the Matlab used is Matlab 2012.  
+Here, we don't use grid search on parameter C (we fixed it to 1). You can find even better results if you do a grid search in this parameter. Remember that the matlab implementation of the svm is based on Libsvm, so there is not a problem using this SVM.  
 
 3. How the source code works
 ============================
 
 The source code is divided on folders. There are three folders. One of them is applied to Frames of documents, 
 the other on Characters and other on Documents. We are planning to put all the folders and source code until 2015.
-The first folder uploaded is the one applied on Frames (on which we found better results).
+The first folder uploaded is the one applied on Frames (on which we found better results). The version of the Matlab used in this code is Matlab 2012. 
 
 To run the code, just run main.m. There will be a menu showed to you where you will choose one of the five methods 
 proposed in this paper. We are not making available the inter-approach feature fusion approaches (CTGF_MDMS and CTGF_GLCM_MDMS) 
