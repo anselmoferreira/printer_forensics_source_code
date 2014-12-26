@@ -69,8 +69,8 @@ the voting of classifications of feature vectors (one or more, depending on wher
 
 All these steps are done automatically by the source code. So, please be patient and wait it to finish :-)
 
-4. About Us
-===========
+4. About the Authors
+====================
 Anselmo Ferreira: Phd Student in Computer Science at State University of Campinas
 
 Luiz C. Navarro: Master Student in Computer Science at State University of Campinas
