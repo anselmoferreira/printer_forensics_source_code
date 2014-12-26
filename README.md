@@ -6,7 +6,7 @@ printer_forensics_source_code
 
 This is the source code of the paper 'Laser Printer Attribution: Exploring New Features and Beyond', published by us in Forensics Science International.
 
-This source code investigates banding signatures by exploring multidirectional and multiscale textures of printing 
+This source code investigates laser printer banding signatures by exploring multidirectional and multiscale textures of printing 
 material in digitalized versions of printed documents. These signatures are used to identify the laser printer 
 source of a given document. We use SVM linear kernel classifiers to learn these signatures on a set of 
 different printer models and brands. We show accuracies above 98%. 
