@@ -15,8 +15,8 @@ switch technique
         addpath('Descriptors/GLCM_MD');
 	 offsets = {[0 1], [-1 1], [-1 0], [-1 -1], ...
                        [0 -1], [1 -1], [1 0], [1 1]};
-    case 'GLCM_MD_MS'
-        addpath('Descriptors/GLCM_MD_MS');
+    case 'GLCM_MDMS'
+        addpath('Descriptors/GLCM_MDMS');
 	 offsets = {[0 1], [-1 1], [-1 0], [-1 -1], ...
                        [0 -1], [1 -1], [1 0], [1 1]};
 end
@@ -39,6 +39,7 @@ number=cellstr(number);
 %Dados de frames do mesmo documento sempre são colocados em sequência (um abaixo do outro). Depois do último dado de frame de um documento
 %começam os dados dos frames do outro documento.
  
+
 for i=1:size(dataset,1) 
     
 	%pego o endereço de onde está o documento do documento, colunas 1 a 4 da tabela ajudam nessa informação      
@@ -65,49 +66,25 @@ for i=1:size(dataset,1)
 	%extraio as features do frame
         %if CTGF variations are chosen
 
-        if (strcmp(technique,'CTGF3X3')==0) 
-		addpath('Descriptors/CTGF_3X3');
-		keepvec=load('keepvec.dat');
-		feature_vector=GTFG_GetFeatVec(single(frame), 1, 32);
-		feature_vector=feature_vector(:,find(keepvec==1));
-	end
-
-	if (strcmp(technique,'CTGF5X5')==0) 
-		
-		addpath('Descriptors/CTGF_5X5');
-		keepvec=load('keepvec.dat');        
-		feature_vector=GTFG_GetFeatVec(single(frame), 1, 32);
-		feature_vector=feature_vector(:,find(keepvec==1));
-	end
-
-	if (strcmp(technique,'CTGF7X7')==0) 
-        
-		addpath('Descriptors/CTGF_7X7');
-		keepvec=load('keepvec.dat');
-		feature_vector=GTFG_GetFeatVec(single(frame), 1, 32);
-		feature_vector=feature_vector(:,find(keepvec==1));
-	end
-
-
-	if (strcmp(technique,'GLCM_MD')==0)
-
-		 addpath('Descriptors/GLCM_MD');
-	 offsets = {[0 1], [-1 1], [-1 0], [-1 -1], ...
-                       [0 -1], [1 -1], [1 0], [1 1]};
+switch technique
+    case 'CTGF3X3'
+        feature_vector=GTFG_GetFeatVec(single(frame), 1, 32);
+        feature_vector=feature_vector(:,find(keepvec==1));
+    case 'CTGF5X5'
+	feature_vector=GTFG_GetFeatVec(single(frame), 1, 32);
+	feature_vector=feature_vector(:,find(keepvec==1));
+    case 'CTGF7X7'
+       feature_vector=GTFG_GetFeatVec(single(frame), 1, 32);
+       feature_vector=feature_vector(:,find(keepvec==1));
+    case 'GLCM_MD'
+          
 		parfor k = 1:length(offsets)
                 	features{k}  = extract_features_glcm(frame, offsets{k});
 		end
 		
 		feature_vector = cell2mat(features);
-	end
-
-	if (strcmp(technique,'GLCM_MD_MS')==0)
-
-		 addpath('Descriptors/GLCM_MD_MS');
-	 offsets = {[0 1], [-1 1], [-1 0], [-1 -1], ...
-                       [0 -1], [1 -1], [1 0], [1 1]};
-
-		features = cell(1, 32); % 4 scales * 8 directions/scale
+    case 'GLCM_MDMS'
+        features = cell(1, 32); % 4 scales * 8 directions/scale
             	scaledown = impyramid(frame, 'reduce');
             	pyramid = {impyramid(frame, 'expand'); frame; 
             	scaledown; impyramid(scaledown, 'reduce')};
@@ -123,7 +100,12 @@ for i=1:size(dataset,1)
             
             	% Each line is an observation, each column, a feature
             	feature_vector = cell2mat(features);
-	end
+end
+
+
+
+
+	
 
 	
 
