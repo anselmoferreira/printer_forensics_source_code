@@ -37,7 +37,7 @@ What do we proposed to laser printer attribution in this paper?
 
 4- Realistic dataset, comprising 1,000+ Wikipedia documents is proposed for evaluation
 
-5- Comparison to other techniques and other generalpurpose descriptors is performed
+5- Comparison to other techniques and other general purpose texture descriptors
 
 If you use this code in your research, please don't forget to cite us in your paper:
 
