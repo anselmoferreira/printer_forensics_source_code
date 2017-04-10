@@ -22,10 +22,9 @@ year = "2015",
 author = "Anselmo Ferreira and Luiz C. Navarro and Giuliano Pinheiro and Jefersson A. dos Santos and Anderson Rocha",
 }
 
-This source code investigates laser printer banding signatures by exploring multidirectional and multiscale textures of printing 
-material in digitalized versions of printed documents. These signatures are used to identify the laser printer 
+This source code investigates laser printer banding signatures by exploring multidirectional and multiscale textures of printing material in digitalized versions of printed documents. These signatures are used to identify the laser printer 
 source of a given document. We use SVM linear kernel classifiers to learn these signatures on a set of 
-different printer models and brands. We show accuracies above 98%. 
+different printer models and brands. We show accuracies above 97%. 
 
 If you want to know more about the proposed techniques you can find our paper at: http://dx.doi.org/10.1016/j.forsciint.2014.11.030
 
@@ -63,18 +62,18 @@ Here, we don't use grid search on parameter C (we fixed it to 1). You can find e
 The source code is divided on folders. The first folder uploaded is the one applied on Frames (on which we found better results). The version of the Matlab used in this code is Matlab 2012. 
 
 To run the code, just run main.m. There will be a menu showed to you where you will choose one of the five methods
-proposed in the paper. We are not making available the inter-approach feature fusion approaches (CTGF_MDMS and CTGF_GLCM_MDMS) because they are straighforward: just run each method separately and after that concatenate the feature vectors.
+proposed in the paper. We are not making available the inter-approach feature fusion approaches (CTGF_MDMS and CTGF_GLCM_MDMS) because they are straighforward: just run each method separately and after that concatenate the feature vectors. Also, applying the proposed approaches on letters and documents is also simple: just change the input of the algorithm.
 
 After choosing the method used, the source code will do the following operations:
 
 1- Extract the feature vectors of ALL documents. Documents will have one feature vector 
 (if the technique is applied on documents) or more (if the technique is applied on letters and frames). Please change the folder where the dataset is located on test_feature_vector_generator.
 
-2- Concatenate the feature vectors to train the classifier based on a 5x2 cross validation 
+2- Concatenate vertically the feature vectors of training documents to train the classifier based on a 5x2 cross validation 
 table (see info/5x2_data.csv).
 
-3- Classify the data by using 5x2 cross validation. The classification is based on 
-the voting of classifications of feature vectors (one or more, depending on where the technique is applied).
+3- Classify the test feature vectors from testing documents by using 5x2 cross validation. The classification is based on 
+the voting of classifications of feature vectors (one or more, depending on where the technique is applied on the document).
 
 4- Write confusion tables and show the mean accuracy of the 5x2 cross validation.
 
