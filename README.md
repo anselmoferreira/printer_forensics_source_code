@@ -83,6 +83,7 @@ All these steps are done automatically by the source code. So, please be patient
 4. About the Authors
 
 ====================
+
 Anselmo Ferreira: Phd in Computer Science at State University of Campinas, Brazil
 
 Luiz C. Navarro: Master Student in Computer Science at State University of Campinas, Brazil
@@ -95,10 +96,11 @@ Anderson Rocha: Computer Science Professor at State University of Campinas, Braz
 
 
 5. Contact
+
 ==========
 
 If you find some problems or have suggestions, please don't hesitate to contact me
 
-anselmoferreira@ic.unicamp.br
+anselmoferreira@gmail.com
 
 
