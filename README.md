@@ -2,7 +2,9 @@ printer_forensics_source_code
 =============================
 
 1. About the source code
+
 =========================
+
 
 This is the source code of the paper 'Laser Printer Attribution: Exploring New Features and Beyond', published by us in Forensics Science International.
 
@@ -46,6 +48,7 @@ We are planning to upload ALL the source code used in this research in GitHub.
 We will also translate the code and comments to English. Sorry, first time making source code available :-(
 
 2. Classifier used
+
 ==================
 
 Here we used our own implementation of the one-against-one linear kernel SVM classifiers using the 
@@ -54,6 +57,7 @@ matlab stats package. You can use Libsvm if you want, but this SVM is more accur
 Here, we don't use grid search on parameter C (we fixed it to 1). You can find even better results if you do a grid search in this parameter. Most of the classifications are based on voting of classifications because the documents can have one or more feature vectors.
 
 3. How the source code works
+
 ============================
 
 The source code is divided on folders. The first folder uploaded is the one applied on Frames (on which we found better results). The version of the Matlab used in this code is Matlab 2012. 
@@ -77,8 +81,9 @@ the voting of classifications of feature vectors (one or more, depending on wher
 All these steps are done automatically by the source code. So, please be patient and wait it to finish :-)
 
 4. About the Authors
+
 ====================
-Anselmo Ferreira: Phd Student in Computer Science at State University of Campinas, Brazil
+Anselmo Ferreira: Phd in Computer Science at State University of Campinas, Brazil
 
 Luiz C. Navarro: Master Student in Computer Science at State University of Campinas, Brazil
 
