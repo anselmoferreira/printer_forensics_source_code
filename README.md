@@ -27,7 +27,7 @@ different printer models and brands. We show accuracies above 98%.
 
 If you want to know more about the proposed techniques you can find our paper at: http://dx.doi.org/10.1016/j.forsciint.2014.11.030
 
-What do we proposed to laser printer attribution in this paper?
+What we proposed to laser printer attribution in this paper?
 
 1- A multidirectional GLCM extension technique
 
@@ -38,11 +38,6 @@ What do we proposed to laser printer attribution in this paper?
 4- Realistic dataset, comprising 1,000+ Wikipedia documents is proposed for evaluation
 
 5- Comparison to other techniques and other general purpose texture descriptors
-
-If you use this code in your research, please don't forget to cite us in your paper:
-
-A. C. B. Ferreira, L. C. Navarro, G. Pinheiro, J. A. dos Santos, and A. R. Rocha. Laser Printer Attribution: 
-exploring new features and beyond. Forensic Science International, 2015.
 
 The dataset can be found at: http://www.recod.ic.unicamp.br/~anselmo/printer_forensics_dataset/
 
@@ -61,9 +56,7 @@ Here, we don't use grid search on parameter C (we fixed it to 1). You can find e
 3. How the source code works
 ============================
 
-The source code is divided on folders. There are three folders. One of them is applied to Frames of documents, 
-the other on Characters and other on Documents. We are planning to put all the folders and source code until 2015.
-The first folder uploaded is the one applied on Frames (on which we found better results). The version of the Matlab used in this code is Matlab 2012. 
+The source code is divided on folders. The first folder uploaded is the one applied on Frames (on which we found better results). The version of the Matlab used in this code is Matlab 2012. 
 
 To run the code, just run main.m. There will be a menu showed to you where you will choose one of the five methods
 proposed in the paper. We are not making available the inter-approach feature fusion approaches (CTGF_MDMS and CTGF_GLCM_MDMS) because they are straighforward: just run each method separately and after that concatenate the feature vectors.
